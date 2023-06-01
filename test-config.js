@@ -10,9 +10,10 @@ exports.config = {
         // require: ['@babel/register'],
         timeout: 600000
     },
+    waitforTimeout: 10000,
     maxInstances: 1,
     specs: [
-        'src/test_script/account/TC_03.js',
+        'src/test_script/account/TC_04.js',
         
     ],
     capabilities: [{
