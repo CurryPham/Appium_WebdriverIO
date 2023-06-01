@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/switch.js'
+        './api/waitForDisplayed.js'
     ],
     capabilities: [{
         "platformName": "Android",
