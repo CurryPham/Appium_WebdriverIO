@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/swipVerical.js'
+        './api/swipeHorizontal.js'
     ],
     capabilities: [{
         "platformName": "Android",
