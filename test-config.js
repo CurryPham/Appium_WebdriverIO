@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/saveScreenShot.js'
+        './api/swipVerical.js'
     ],
     capabilities: [{
         "platformName": "Android",
