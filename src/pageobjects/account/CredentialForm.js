@@ -1,4 +1,4 @@
-const EMAIL_TXT_FIELD = '~input-email.'
+const EMAIL_TXT_FIELD = '~input-email'
 const PASSWORD_TXT_FIELD = '~input-password'
 
 class CredentialForm {
@@ -22,6 +22,10 @@ class CredentialForm {
 
     async inputPassword(password) {
         await this.password_txt_filed.setValue(password);
+    }
+
+    async valueEmail(value) {
+        await expect(this.email_txt_filed).toHaveText(value, {trim:true})
     }
 
     async login(username, password) {
