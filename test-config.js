@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/waitForDisplayed.js'
+        './api/saveScreenShot.js'
     ],
     capabilities: [{
         "platformName": "Android",
