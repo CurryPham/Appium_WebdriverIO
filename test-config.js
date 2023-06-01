@@ -15,7 +15,7 @@ exports.config = {
     waitforTimeout: 10000,
     maxInstances: 1,
     specs: [
-        'src/test_script/account/TC_05.js',
+        'src/test_script/account/TC_06.js',
         
     ],
     capabilities: [{
