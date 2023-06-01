@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/click.js'
+        './api/setValue.js'
     ],
     capabilities: [{
         "platformName": "Android",
