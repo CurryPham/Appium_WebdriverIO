@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/getValue.js'
+        './api/switch.js'
     ],
     capabilities: [{
         "platformName": "Android",
