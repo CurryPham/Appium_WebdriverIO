@@ -1,3 +1,5 @@
+let chai = require('chai');
+
 exports.config = {
     runner: 'local',
     port: 4723,
@@ -22,5 +24,9 @@ exports.config = {
         "udio": "emulator-5554",
         "appPackage": "com.wdiodemoapp",
         "appActivity": "MainActivity"
-    }]
+    }],
+
+    before: function() {
+        global.chaiExpect = chai.expect
+    }
 }

@@ -4,7 +4,7 @@ const PASSWORD_TXT_FIELD = '~input-password'
 class CredentialForm {
     
 
-    get email_txt_filed() {
+    get     email_txt_filed() {
         return $(EMAIL_TXT_FIELD)
     }
 
@@ -23,9 +23,10 @@ class CredentialForm {
     async inputPassword(password) {
         await this.password_txt_filed.setValue(password);
     }
-
+    
     async valueEmail(value) {
         await expect(this.email_txt_filed).toHaveText(value, {trim:true})
+        // await chaiExpect(this.email_txt_filed.getText()).to.be.equal(value, '[ERR] the email field value is incorrect!')
     }
 
     async login(username, password) {
