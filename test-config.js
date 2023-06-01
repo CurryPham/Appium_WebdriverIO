@@ -12,7 +12,8 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/swipeHorizontal.js'
+        'src/test_script/account/TC_01.js',
+        
     ],
     capabilities: [{
         "platformName": "Android",
