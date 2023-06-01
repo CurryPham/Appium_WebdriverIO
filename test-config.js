@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        './api/addValue.js'
+        './api/getValue.js'
     ],
     capabilities: [{
         "platformName": "Android",
