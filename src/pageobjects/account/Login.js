@@ -17,6 +17,11 @@ class Login {
         return $(LOGIN_BTN)
     }
 
+
+    async waitForDisplayed() {
+        await this.email_txt_filed.waitForDisplayed({timeout: 5000});
+    }
+
     async inputUsername(username) {
         await this.email_txt_filed.setValue(username);
     }

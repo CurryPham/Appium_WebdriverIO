@@ -12,7 +12,7 @@ exports.config = {
     },
     maxInstances: 1,
     specs: [
-        'src/test_script/account/TC_01.js',
+        'src/test_script/account/TC_02.js',
         
     ],
     capabilities: [{
