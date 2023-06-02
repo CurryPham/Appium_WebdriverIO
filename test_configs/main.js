@@ -14,7 +14,7 @@ exports.config = {
         timeout: 600000
     },
     waitforTimeout: 10000,
-    maxInstances: 1,
+    maxInstances: 2,
     specs: [
         '../src/test_script/account/TC_01_Login.js',
         
