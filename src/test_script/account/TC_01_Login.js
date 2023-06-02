@@ -2,6 +2,7 @@ let LoginFlow = require('../../test_flows/account/LoginFlow')
 let {loginData} = require('../../test_data/account/TC_01_Login')
 let allureReporter = require('@wdio/allure-reporter')
 
+// describe(`Account Function for ${browser.capabilities.deviceName}`, function () {
 describe(`Account Function`, function () {
 
     it('should login successfully', async () => {
