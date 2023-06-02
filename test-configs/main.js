@@ -1,4 +1,4 @@
-let chai = require('chai');
+let chai = require("chai")
 
 exports.config = {
     runner: 'local',
@@ -15,7 +15,7 @@ exports.config = {
     waitforTimeout: 10000,
     maxInstances: 1,
     specs: [
-        'src/test_script/account/TC_01_Login.js',
+        '../src/test_script/account/TC_01_Login.js',
         
     ],
 
