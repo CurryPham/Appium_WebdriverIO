@@ -3,7 +3,7 @@ const allure = require('allure-commandline');
 
 exports.config = {
     runner: 'local',
-
+    // port: 4444, 
     port: 4723,
     host: 'localhost',
     path: '/wd/hub',
