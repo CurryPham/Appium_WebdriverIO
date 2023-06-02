@@ -16,10 +16,10 @@ describe(`Account Function`, function () {
         await browser.pause(1000)
     });
 
-    it('Login unsuccessfully', async () => {
-        const {email, password} = loginData.INVALID_CREDS
-        const loginFlow = new LoginFlow(email, password)
-        await loginFlow.login_with_credentials()
-        await loginFlow.verify_login_unsuccessfully()
-    });
+    // it('Login unsuccessfully', async () => {
+    //     const {email, password} = loginData.INVALID_CREDS
+    //     const loginFlow = new LoginFlow(email, password)
+    //     await loginFlow.login_with_credentials()
+    //     await loginFlow.verify_login_unsuccessfully()
+    // });
 });

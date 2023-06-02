@@ -18,6 +18,13 @@ exports.config = {
         'src/test_script/account/TC_01_Login.js',
         
     ],
+    capabilities: [{
+        "platformName": "Android",
+        "automationName": "UiAutomator2",
+        "udio": "emulator-5554",
+        "appPackage": "com.wdiodemoapp",
+        "appActivity": "MainActivity"
+    }],
 
     before: function() {
         global.chaiExpect = chai.expect
