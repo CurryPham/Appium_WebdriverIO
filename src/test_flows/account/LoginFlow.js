@@ -1,6 +1,7 @@
 let Login = require('../../page_objects/account/Login')
 let NavBar = require('../../page_objects/common/NavBar')
 let loginMessagePopup = require('../../page_objects/account/LoginMessagePopup')
+let allureReporter = require('@wdio/allure-reporter')
 
 class LoginFlow {
 
@@ -11,8 +12,11 @@ class LoginFlow {
 
     async login_with_credentials() {
         await NavBar.login_icon.click()
+        allureReporter.addStep(`Input email as ${this.email}`)
         await Login.email_txt_filed.setValue(this.email)
+        allureReporter.addStep(`Input password as ${this.password}`)
         await Login.password_txt_filed.setValue(this.password)
+        allureReporter.addStep('Click on Login button')
         await Login.click_on_login_btn()
     }
 
