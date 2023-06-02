@@ -5,7 +5,7 @@ exports.config = {
     runner: 'local',
     // port: 4444, 
     port: 4723,
-    host: 'localhost',
+    host: 'http://127.0.0.1:',
     path: '/wd/hub',
     logLevel: 'info',
     framework: 'mocha',
@@ -17,7 +17,7 @@ exports.config = {
     waitforTimeout: 10000,
     maxInstances: 2,
     specs: [
-        '../src/test_script/account/TC_01_Login.js',
+        '../src/test_script/webview/TC_003_Webview.js',
         
     ],
     reporters: [

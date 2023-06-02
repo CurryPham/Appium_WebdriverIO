@@ -7,8 +7,7 @@ config.capabilities = [
     "udio": "emulator-5554",
     "appPackage": "com.wdiodemoapp",
     "appActivity": "MainActivity",
-    "systemPort": 6001,
-    port: 6000,
+    port: 4723,
     deviceName: "pixel_2"
 },
     {
@@ -17,8 +16,7 @@ config.capabilities = [
     "udio": "emulator-5556",
     "appPackage": "com.wdiodemoapp",
     "appActivity": "MainActivity",
-    "systemPort": 7001,
-    port: 7000,
+    port: 4001,
     deviceName: "pixel_5"
 }
 ]

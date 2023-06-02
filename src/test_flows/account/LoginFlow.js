@@ -21,7 +21,7 @@ class LoginFlow {
     }
 
     async verify_login_success() {
-        const expected_msg_title = "Success."
+        const expected_msg_title = "Success"
         const expected_msg_content = "You are logged in!"
 
         await expect(loginMessagePopup.msg_title).toHaveText(expected_msg_title)
