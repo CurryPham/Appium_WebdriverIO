@@ -1,6 +1,8 @@
 let CredentialForm = require('./CredentialForm');
 
 const LOGIN_BTN = '~button-LOGIN'
+const INVALID_EMAIL_TXT = '//*[@text="Please enter a valid email address"]'
+const INVALID_PASSWORD_TXT = '//*[@text="Please enter at least 8 characters"]'
 
 class Login extends CredentialForm {
 

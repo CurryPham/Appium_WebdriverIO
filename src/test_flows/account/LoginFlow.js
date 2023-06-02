@@ -4,15 +4,15 @@ let loginMessagePopup = require('../../page_objects/account/LoginMessagePopup')
 
 class LoginFlow {
 
-    // constructor(email, password) {
-    //     this.email = email
-    //     this.password = password
-    // }
+    constructor(email, password) {
+        this.email = email
+        this.password = password
+    }
 
-    async login_with_credentials(email, password) {
+    async login_with_credentials() {
         await NavBar.login_icon.click()
-        await Login.email_txt_filed.setValue(email)
-        await Login.password_txt_filed.setValue(password)
+        await Login.email_txt_filed.setValue(this.email)
+        await Login.password_txt_filed.setValue(this.password)
         await Login.click_on_login_btn()
     }
 
@@ -25,6 +25,19 @@ class LoginFlow {
         await loginMessagePopup.accept_btn.click()
 
     }
+
+    async verify_login_unsuccessfully() {
+        if (!this.email && this.password.length >= 8) {
+            await chaiExpect(Login.is_invalid_email_format_msg_displayed()).to.equal(true)
+            await chaiExpect(Login.is_invalid_password_format_msg_displayed()).to.equal(false)
+        } else if (this.email.length > 0 && this.password.length < 8) {
+            await chaiExpect(Login.is_invalid_email_format_msg_displayed()).to.equal(false)
+            await chaiExpect(Login.is_invalid_password_format_msg_displayed()).to.equal(true)
+        } else{
+            await chaiExpect(Login.is_invalid_email_format_msg_displayed()).to.equal(true)
+            await chaiExpect(Login.is_invalid_password_format_msg_displayed()).to.equal(true)
+        }
+}
 }
 
 module.exports = LoginFlow

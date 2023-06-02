@@ -4,8 +4,8 @@ const VALID_CREDS = {
 }
 
 const INVALID_CREDS = {
-    email: 'teo@gmail.com',
-    password: '12345678',
+    email: ' ',
+    password: '1234567'
 }
 
 exports.loginData = {
