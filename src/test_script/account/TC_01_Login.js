@@ -1,9 +1,12 @@
 let LoginFlow = require('../../test_flows/account/LoginFlow')
 let {loginData} = require('../../test_data/account/TC_01_Login')
+let allureReporter = require('@wdio/allure-reporter')
 
 describe(`Account Function`, function () {
 
     it('should login successfully', async () => {
+        allureReporter.addTestId("TC_001")
+        allureReporter.addSeverity("critical")
         const{email, password} = loginData.VALID_CREDS
         const loginFlow = new LoginFlow(email, password)
         const LOGIN_ICON = '~Login'
@@ -17,6 +20,8 @@ describe(`Account Function`, function () {
     });
 
     // it('Login unsuccessfully', async () => {
+        allureReporter.addTestId("TC_002")
+        allureReporter.addSeverity("normal")
     //     const {email, password} = loginData.INVALID_CREDS
     //     const loginFlow = new LoginFlow(email, password)
     //     await loginFlow.login_with_credentials()
