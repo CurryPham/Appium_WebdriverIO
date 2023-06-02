@@ -23,6 +23,7 @@ exports.config = {
         ['allure', {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
             disableMochaHooks: true,
             issueLinkTemplate: "https://mybug-tracker/{}",
             tmsLinkTemplate: "https://my-tms/{}"
@@ -53,4 +54,10 @@ exports.config = {
             })
         })
     },
+
+    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+        if(error){
+            await browser.takeScreenshot()
+        }
+      }
 }
